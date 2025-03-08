@@ -215,6 +215,26 @@ a:focus {
   font-size: 3.5rem;
   margin-bottom: 10px;
 }
+@media (max-width: 1200px) {
+  .slider_section .detail-box h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 992px) {
+  .slider_section .detail-box h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .slider_section .detail-box h1 {
+    font-size: 1.8rem;
+  }
+}
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 40px;
@@ -287,6 +307,26 @@ a:focus {
 }
 .shop_section .box .detail-box h6 span {
   color: #db4f66;
+}
+@media (max-width: 1200px) {
+  .shop_section .box .detail-box h6 {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 992px) {
+  .shop_section .box .detail-box h6 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .shop_section .box .detail-box h6 {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 576px) {
+  .shop_section .box .detail-box h6 {
+    font-size: 0.8rem;
+  }
 }
 .shop_section .box .new {
   width: 50px;
@@ -689,6 +729,26 @@ a:focus {
   text-transform: uppercase;
   font-size: 18px;
   margin-bottom: 25px;
+}
+@media (max-width: 1200px) {
+  .info_section h6 {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 992px) {
+  .info_section h6 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .info_section h6 {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 576px) {
+  .info_section h6 {
+    font-size: 0.8rem;
+  }
 }
 .info_section p {
   color: #cbc9c9;

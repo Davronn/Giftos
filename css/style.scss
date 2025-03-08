@@ -295,6 +295,22 @@ a:focus {
       font-weight: bold;
       font-size: 3.5rem;
       margin-bottom: 10px;
+
+      @media (max-width: 1200px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 992px) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 576px) {
+        font-size: 1.8rem;
+      }
     }
 
     a {
@@ -376,6 +392,22 @@ a:focus {
         span {
           color: $btnColor;
         }
+
+        @media (max-width: 1200px) {
+          font-size: 0.95rem;
+        }
+
+        @media  (max-width: 992px) {
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 0.85rem;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 0.8rem;
+        }
       }
     }
 
@@ -451,6 +483,8 @@ a:focus {
   }
 
   @media (max-width: 768px) {
+
+    
     .box {
       padding: 5px;
       
@@ -464,6 +498,7 @@ a:focus {
       }
       
       .detail-box {
+        
         h6 {
           font-size: 14px;
         }
@@ -832,6 +867,22 @@ a:focus {
     text-transform: uppercase;
     font-size: 18px;
     margin-bottom: 25px;
+
+    @media (max-width: 1200px) {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 0.8rem;
+    }
   }
 
 

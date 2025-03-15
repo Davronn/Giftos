@@ -190,9 +190,6 @@ a:focus {
 /*end header section*/
 .slider_section .slider_container {
   color: #fefefe;
-  background-color: #000000;
-  background-color: #f89cab;
-  padding: 25px;
   border-radius: 0 0 15px 15px;
 }
 .slider_section .row {
@@ -250,6 +247,51 @@ a:focus {
   background-color: transparent;
   color: #db4566;
 }
+.slider_section .btn_first {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  color: white;
+  background-color: #0b2b32;
+  border: 1px solid #0b2b32;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.slider_section .btn_first:hover {
+  background-color: #1a8aa3;
+  transition: 0.4s;
+  border: 1px solid #1a8aa3;
+}
+.slider_section .btn_second {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  color: white;
+  background-color: #a10000;
+  border: 1px solid #a10000;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.slider_section .btn_second:hover {
+  background-color: #ff0000;
+  transition: 0.4s;
+  border: 1px solid #ff0000;
+}
+.slider_section .btn_tri {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  color: white;
+  background-color: #002aff;
+  border: 1px solid #002aff;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.slider_section .btn_tri:hover {
+  background-color: #0073ff;
+  transition: 0.4s;
+  border: 1px solid #0073ff;
+}
 .slider_section .carousel_btn-box {
   display: flex;
   background-color: #ffffff;
@@ -303,7 +345,9 @@ a:focus {
 }
 .shop_section .box .detail-box {
   display: flex;
+  height: 56px;
   justify-content: space-between;
+  align-items: center;
 }
 .shop_section .box .detail-box h6 span {
   color: #db4f66;
@@ -348,6 +392,7 @@ a:focus {
   right: 0;
   background-color: #db4f66;
   color: #ffffff;
+  color: white;
   text-align: center;
   padding: 10px;
   transition: all 0.3s;
@@ -398,6 +443,10 @@ a:focus {
   }
   .shop_section .box .img-box img {
     max-height: 100px;
+  }
+  .shop_section .box .detail-box {
+    height: 56px;
+    align-items: center;
   }
   .shop_section .box .detail-box h6 {
     font-size: 14px;

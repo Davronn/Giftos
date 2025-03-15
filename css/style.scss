@@ -267,9 +267,9 @@ a:focus {
 
   .slider_container {
     color: #fefefe;
-    background-color: $black;
-    background-color: #f89cab;
-    padding: 25px;
+    // background-color: $black;
+    // background-color: #f89cab;
+    // padding: 25px;
     border-radius: 0 0 15px 15px;
   }
 
@@ -320,7 +320,58 @@ a:focus {
     }
   }
 
+ 
 
+  .btn_first{
+    padding-top:10px ;
+    padding-bottom:10px;
+    width: 150px;
+    color: white;
+    background-color: #0b2b32;
+    border: 1px solid #0b2b32;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .btn_first:hover{
+    background-color: #1a8aa3 ;
+    transition: 0.4s;
+    border: 1px solid #1a8aa3;
+  }
+
+  .btn_second{
+    padding-top:10px ;
+    padding-bottom:10px;
+    width: 150px;
+    color: white;
+    background-color: #a10000;
+    border: 1px solid #a10000;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .btn_second:hover{
+    background-color: #ff0000 ;
+    transition: 0.4s;
+    border: 1px solid #ff0000;
+  }
+
+  .btn_tri{
+    padding-top:10px ;
+    padding-bottom:10px;
+    width: 150px;
+    color: white;
+    background-color: #002aff;
+    border: 1px solid #002aff;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .btn_tri:hover{
+    background-color: #0073ff ;
+    transition: 0.4s;
+    border: 1px solid #0073ff;
+  }
 
   .carousel_btn-box {
     display: flex;
@@ -386,7 +437,9 @@ a:focus {
 
     .detail-box {
       display: flex;
+      height: 56px;
       justify-content: space-between;
+      align-items: center;
 
       h6 {
         span {
@@ -432,6 +485,7 @@ a:focus {
       right: 0;
       background-color: $btnColor;
       color: $white;
+      color: white;
       text-align: center;
       padding: 10px;
       transition: all 0.3s;
@@ -498,7 +552,8 @@ a:focus {
       }
       
       .detail-box {
-        
+        height: 56px;
+        align-items: center;
         h6 {
           font-size: 14px;
         }

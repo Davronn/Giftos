@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahsulot tafsilotlari - Giftos</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>Giftos</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+          >
+            <span class=""></span>
+          </button>
+          <div
+            class="collapse navbar-collapse innerpage_navbar"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Bosh sahifa</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="shop.html">Do'kon</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="why.html">Nega aynan biz</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- end header section -->
+    </div>
+
+    <!-- product details section -->
+    <section class="product_details layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img_container">
+              <div class="main_img">
+                <img src="" alt="" id="productImage" class="img-fluid" />
+              </div>
+              <div class="small_imgs mt-3 d-flex">
+                <!-- Kichik rasmlar dinamik ravishda qo'shiladi -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail_container">
+              <div class="status_badge mb-3" id="newBadge"></div>
+              <h2 id="productName"></h2>
+              <div class="price_box my-4">
+                <h3>Narxi: <span id="productPrice"></span></h3>
+              </div>
+              <div class="description mb-4">
+                <h4>Mahsulot haqida</h4>
+                <p id="productDescription"></p>
+              </div>
+              <div class="features mb-4">
+                <h4>Xususiyatlari</h4>
+                <ul id="productFeatures">
+                  <!-- Xususiyatlar dinamik ravishda qo'shiladi -->
+                </ul>
+              </div>
+              <div class="action_buttons">
+                <a href="https://t.me/Gozal2004" class="buy_btn">Sotib olish</a>
+                <button class="back_btn" onclick="history.back()">
+                  Orqaga
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end product details section -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="data/products.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // URL dan mahsulot ID sini olish
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+
+        // Mahsulotni topish
+        const product = products.find((p) => p.id === productId);
+
+        if (product) {
+          // Asosiy ma'lumotlarni to'ldirish
+          document.getElementById("productImage").src = product.image;
+          document.getElementById("productName").textContent = product.name;
+          document.getElementById("productPrice").textContent =
+            product.price + " so'm";
+          document.getElementById("productDescription").textContent =
+            product.description || "Mahsulot tavsifi tez orada qo'shiladi";
+
+          // Agar yangi mahsulot bo'lsa badge ko'rsatish
+          if (product.isNew) {
+            document.getElementById("newBadge").innerHTML =
+              '<span class="badge">Yangi</span>';
+          }
+
+          // Xususiyatlarni ko'rsatish
+          if (product.features && product.features.length > 0) {
+            const featuresList = document.getElementById("productFeatures");
+            product.features.forEach((feature) => {
+              const li = document.createElement("li");
+              li.textContent = feature;
+              featuresList.appendChild(li);
+            });
+          }
+        } else {
+          // Agar mahsulot topilmasa
+          document.querySelector(".product_details").innerHTML = `
+                    <div class="container text-center py-5">
+                        <h2>Mahsulot topilmadi</h2>
+                        <a href="shop.html" class="back_btn mt-3">Do'konga qaytish</a>
+                    </div>
+                `;
+        }
+      });
+    </script>
+
+    <style>
+      .product_details {
+        padding: 80px 0;
+      }
+
+      .img_container {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .main_img {
+        text-align: center;
+      }
+
+      .main_img img {
+        max-height: 400px;
+        object-fit: contain;
+      }
+
+      .small_imgs img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .small_imgs img:hover {
+        transform: scale(1.05);
+      }
+
+      .detail_container {
+        padding: 20px;
+      }
+
+      .status_badge .badge {
+        background-color: #f89cab;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .price_box {
+        font-size: 24px;
+        color: #db4f66;
+      }
+
+      .description h4,
+      .features h4 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .features ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .features li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .features li:last-child {
+        border-bottom: none;
+      }
+
+      .action_buttons {
+        margin-top: 30px;
+      }
+
+      .buy_btn,
+      .back_btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .buy_btn {
+        background-color: #db4f66;
+        color: white;
+        margin-right: 15px;
+      }
+
+      .buy_btn:hover {
+        background-color: #c73e54;
+        text-decoration: none;
+        color: white;
+      }
+
+      .back_btn {
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .back_btn:hover {
+        background-color: #e2e6ea;
+      }
+
+      @media (max-width: 768px) {
+        .product_details {
+          padding: 40px 0;
+        }
+
+        .detail_container {
+          padding: 20px 0;
+        }
+
+        .main_img img {
+          max-height: 300px;
+        }
+
+        .action_buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .buy_btn,
+        .back_btn {
+          width: 100%;
+          text-align: center;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </body>
+</html>

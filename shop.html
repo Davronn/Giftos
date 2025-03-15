@@ -177,7 +177,7 @@
           const productHTML = productsToShow
             .map(
               (product) => `
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
             <div class="box" onclick="window.location.href='details.html?id=${
               product.id
             }'">
@@ -189,9 +189,9 @@
                     ${product.name}
                   </h6>
                   <h6>
-                    Narxi
+                    Narxi :
                     <span>
-                      $${product.price}
+                      ${product.price} so'm
                     </span>
                   </h6>
                 </div>

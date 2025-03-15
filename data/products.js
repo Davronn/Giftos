@@ -1,112 +1,107 @@
 const products = [
   {
     id: "1",
-    name: "Gul dasta",
-    price: 75,
-    image: "images/p4.png",
+    name: "Sho'ko'lad",
+    price: 75000,
+    image: "images/shokolad-yurakli.jpg",
     isNew: true,
-    description: "Go'zal va nafis gullar to'plami. Har qanday bayram uchun ajoyib sovg'a.",
+    description: "Mazali tillarang muqovali shokoladlar yurak shaklida qutisi bilan",
     features: [
-      "Tarkibida 15 ta atirgul",
+      "Tarkibida 15 ta shokolad",
       "Qo'shimcha bezaklar",
-      "Maxsus o'rov qog'ozi",
+      "Tillarang qog'ozi",
       "Bepul yetkazib berish"
     ]
   },
   {
     id: "2",
-    name: "Smart soat",
+    name: "Ayiqcha",
     price: 150000,
-    image: "images/p7.png",
+    image: "images/bear.jpg",
     isNew: true,
-    description: "Zamonaviy smart soat. Barcha kerakli funksiyalar mavjud.",
+    description: "Yumshoq ayiqcha maxsus qutida",
     features: [
-      "Yurak urishi monitori",
-      "Suv o'tkazmaydigan",
-      "5 kun batareya muddati",
-      "GPS funksiyasi"
+      "Alohida quti",
+      "Yumshoq ayiqcha",
     ]
   },
   {
     id: "3",
-    name: "Yumshoq ayiqcha",
+    name: "Sharlar",
     price: 90000,
-    image: "images/p5.png",
+    image: "images/boy-or-girl.jpg",
     isNew: true,
-    description: "Yumshoq ayiqcha bolalar uchun",
+    description: "Chaqaloq jinsini aniqlash uchun sharlar",
     features: [
-      "1 ta ayiqcha",
-      "bo'yinboq",
+      "3 ta ko'k shar",
+      "3 ta pushti shar",
+      "Bitta katta Qora shar"
     ]
   },
   {
     id: "4",
-    name: "Charm hamyon",
+    name: "Sharlar",
     price: 65000,
-    image: "images/purse.png",
+    image: "images/baloons2.jpg",
     isNew: false,
-    description: "Yuqori sifatli charm hamyon. Ko'p xonali va qulay dizayn.",
+    description: "Sharlar to'plami bolalar bayramlari uchun",
     features: [
-      "100% tabiiy charm",
-      "Ko'p xonali",
-      "RFID himoyasi",
-      "2 yillik kafolat"
+      "Ayiqchalik shar",
+      "Q'shimcha sharlar",
+      "Sifatli",
     ]
   },
   {
     id: "5",
-    name: "Zargarlik to'plami",
+    name: "Sharlar to'plami",
     price: 120000,
-    image: "images/p1.png",
+    image: "images/baloons.jpg",
     isNew: true,
-    description: "Ayollar uchun zargarlik to'plami. Zamonaviy va nafis dizayn.",
+    description: "Sharlar to'plami bolalar bayramlari uchun",
     features: [
-      "Marvarid marjonlar",
-      "Oltin suvi yugurtirilgan",
-      "Quloqchinlar to'plami",
-      "Maxsus quti"
+      "Oq sharlar",
+      "Qizil sharlar",
+      "Sifatli",
     ]
   },
   {
     id: "6",
-    name: "Kosmetika to'plami",
+    name: "Gullar",
     price: 85000,
-    image: "images/p6.png",
+    image: "images/lola.jpg",
     isNew: false,
-    description: "Professional kosmetika to'plami. Barcha kerakli vositalar bir to'plamda.",
+    description: "Sovg'a uchun ajoyib quti ichidagi lolalar",
     features: [
-      "Organik tarkib",
-      "Gipoallergenik",
-      "10 ta produkt",
-      "Chiroyli sumka"
+      "8 ta lola ",
+      "Maxsus idish",
+      "Bantiklik shar",
+      "Chiroyli"
     ]
   },
   {
     id: "7",
-    name: "Smart soat",
+    name: "Sharli guldasta",
     price: 150000,
-    image: "images/p7.png",
+    image: "images/baloon-gul.jpg",
     isNew: true,
-    description: "Zamonaviy smart soat. Barcha kerakli funksiyalar mavjud.",
+    description: "Sharlardan tayyorlangan guldasta",
     features: [
-      "Yurak urishi monitori",
-      "Suv o'tkazmaydigan",
-      "5 kun batareya muddati",
-      "GPS funksiyasi"
+      "Yurakli sharlar 5 ta",
+      "Maxsus o'ram ",
+      "Chiroyli ko'rinish",
     ]
   },
   {
     id: "8",
-    name: "Qahva to'plami",
+    name: "Raqamli sharlar",
     price: 55000,
-    image: "images/p8.png",
+    image: "images/baloon-1.jpg",
     isNew: false,
-    description: "Premium qahva donlari to'plami. Turli xil mamlakatlardan keltirilgan.",
+    description: "Raqamli sharlar bu bilan yoshingizni yasasangiz bo'aldi",
     features: [
-      "4 xil qahva turi",
-      "Maxsus yanchgich",
-      "Qahva filtrlari",
-      "Ko'rsatmalar kitobi"
+      "1 yoshdan 100 yoshgacha",
+      "Ajoyib shar",
+      "Maxsus bezaklar",
     ]
   },
 ]; 

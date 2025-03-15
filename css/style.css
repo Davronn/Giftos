@@ -336,18 +336,18 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 30px;
   height: 245px;
 }
 .shop_section .box .img-box img {
-  max-width: 100%;
-  max-height: 145px;
+  width: 230px;
+  max-height: 245px;
 }
 .shop_section .box .detail-box {
   display: flex;
   height: 56px;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 .shop_section .box .detail-box h6 span {
   color: #db4f66;
@@ -426,11 +426,10 @@ a:focus {
     padding: 8px;
   }
   .shop_section .box .img-box {
-    height: 200px;
-    padding: 10px 20px;
+    height: 240px;
   }
   .shop_section .box .img-box img {
-    max-height: 120px;
+    max-height: 245px;
   }
 }
 @media (max-width: 768px) {
@@ -438,11 +437,11 @@ a:focus {
     padding: 5px;
   }
   .shop_section .box .img-box {
-    height: 180px;
-    padding: 8px 15px;
+    height: 240px;
   }
   .shop_section .box .img-box img {
-    max-height: 100px;
+    max-width: 230px;
+    max-height: 240px;
   }
   .shop_section .box .detail-box {
     height: 56px;
@@ -458,12 +457,15 @@ a:focus {
   }
 }
 @media (max-width: 576px) {
+  .shop_section .box {
+    width: 300px;
+  }
   .shop_section .box .img-box {
-    height: 150px;
-    padding: 5px 10px;
+    height: 250px;
   }
   .shop_section .box .img-box img {
-    max-height: 80px;
+    width: 250px;
+    max-height: 240px;
   }
 }
 .shop_section .btn-box {

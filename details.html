@@ -56,7 +56,7 @@
           <div class="col-md-6">
             <div class="img_container">
               <div class="main_img w-100">
-                <img  src="" alt="" id="productImage" class="w-100" />
+                <img src="" alt="" id="productImage" class="w-100" />
               </div>
               <div class="small_imgs mt-3 d-flex">
                 <!-- Kichik rasmlar dinamik ravishda qo'shiladi -->
@@ -93,6 +93,64 @@
     </section>
     <!-- end product details section -->
 
+    <section class="info_section layout_padding2-top">
+      <div class="social_container">
+        <div class="social_box">
+          <a href="https://t.me/Gozal2004">
+            <i class="fa fa-telegram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="info_container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <h6>BIZ HAQIMIZDA</h6>
+              <p>
+                Biz 2024-yildan buyon O'zbekiston bozorida faoliyat yuritib
+                kelmoqdamiz. Bizning asosiy maqsadimiz - mijozlarimizga eng
+                sifatli sovg'alarni taqdim etish.
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-3"></div>
+            <div class="col-md-6 col-lg-3">
+              <h6>YORDAM KERAKMI?</h6>
+              <p>
+                Bizning professional mutaxassislarimiz sizga har qanday savolda
+                yordam berishga tayyor. Biz bilan bog'laning!
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h6>BOG'LANISH</h6>
+              <div class="info_link-box">
+                <a href="tel:+998 97 706 06 50">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>+998 97 706 06 50🧔🏻</span>
+                </a>
+                <a href="tel:+998 33 706 06 50">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>+998 33 706 06 50🧕🏻</span>
+                </a>
+                <a href="https://www.instagram.com/gifty_toshkent/?__pwa=1#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <span>gifty_toshkent</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer section -->
+      <footer class="footer_section">
+        <div class="container">
+          <p>
+            &copy; <span id="displayYear"></span> Barcha huquqlar himoyalangan
+          </p>
+        </div>
+      </footer>
+      <!-- footer section -->
+    </section>
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="data/products.js"></script>
@@ -101,7 +159,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get("id");
         const product = products.find((p) => p.id === productId);
-    
+
         if (product) {
           document.getElementById("productImage").src = product.image;
           document.getElementById("productName").textContent = product.name;
@@ -109,12 +167,12 @@
             product.price + " so'm gacha";
           document.getElementById("productDescription").textContent =
             product.description || "Mahsulot tavsifi tez orada qo'shiladi";
-    
+
           if (product.isNew) {
             document.getElementById("newBadge").innerHTML =
               '<span class="badge">Yangi</span>';
           }
-    
+
           if (product.features && product.features.length > 0) {
             const featuresList = document.getElementById("productFeatures");
             product.features.forEach((feature) => {
@@ -123,7 +181,7 @@
               featuresList.appendChild(li);
             });
           }
-    
+
           // Kichik rasmlarni qo‘shish
           if (product.images && product.images.length > 0) {
             const smallImgsContainer = document.querySelector(".small_imgs");
@@ -150,18 +208,18 @@
 
     <style>
       .small_imgs img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  margin-right: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
 
-.small_imgs img:hover {
-  transform: scale(1.05);
-}
+      .small_imgs img:hover {
+        transform: scale(1.05);
+      }
 
       .product_details {
         padding: 80px 0;

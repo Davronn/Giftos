@@ -98,29 +98,23 @@
     <script src="data/products.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // URL dan mahsulot ID sini olish
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get("id");
-
-        // Mahsulotni topish
         const product = products.find((p) => p.id === productId);
-
+    
         if (product) {
-          // Asosiy ma'lumotlarni to'ldirish
           document.getElementById("productImage").src = product.image;
           document.getElementById("productName").textContent = product.name;
           document.getElementById("productPrice").textContent =
-            product.price + " so'm";
+            product.price + " so'm gacha";
           document.getElementById("productDescription").textContent =
             product.description || "Mahsulot tavsifi tez orada qo'shiladi";
-
-          // Agar yangi mahsulot bo'lsa badge ko'rsatish
+    
           if (product.isNew) {
             document.getElementById("newBadge").innerHTML =
               '<span class="badge">Yangi</span>';
           }
-
-          // Xususiyatlarni ko'rsatish
+    
           if (product.features && product.features.length > 0) {
             const featuresList = document.getElementById("productFeatures");
             product.features.forEach((feature) => {
@@ -129,19 +123,46 @@
               featuresList.appendChild(li);
             });
           }
+    
+          // Kichik rasmlarni qo‘shish
+          if (product.images && product.images.length > 0) {
+            const smallImgsContainer = document.querySelector(".small_imgs");
+            product.images.forEach((imgSrc) => {
+              const img = document.createElement("img");
+              img.src = imgSrc;
+              img.classList.add("small_img");
+              img.onclick = function () {
+                document.getElementById("productImage").src = imgSrc;
+              };
+              smallImgsContainer.appendChild(img);
+            });
+          }
         } else {
-          // Agar mahsulot topilmasa
           document.querySelector(".product_details").innerHTML = `
-                    <div class="container text-center py-5">
-                        <h2>Mahsulot topilmadi</h2>
-                        <a href="shop.html" class="back_btn mt-3">Do'konga qaytish</a>
-                    </div>
-                `;
+            <div class="container text-center py-5">
+                <h2>Mahsulot topilmadi</h2>
+                <a href="shop.html" class="back_btn mt-3">Do'konga qaytish</a>
+            </div>
+          `;
         }
       });
     </script>
 
     <style>
+      .small_imgs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.small_imgs img:hover {
+  transform: scale(1.05);
+}
+
       .product_details {
         padding: 80px 0;
       }

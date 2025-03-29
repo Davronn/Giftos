@@ -1,107 +1,110 @@
 const products = [
   {
     id: "1",
-    name: "Sho'ko'lad",
-    price: 75000,
+    name: "Box",
+    price: "75 000-500 000",
     image: "images/shokolad-yurakli.jpg",
+    images: [
+      "images/shokolad-yurakli.jpg",
+      "images/shokolad-yurakli2.jpg",
+      "images/shokolad-yurakli3.jpg",
+      "images/shokolad-yurakli4.jpg",
+    ],
     isNew: true,
-    description: "Mazali tillarang muqovali shokoladlar yurak shaklida qutisi bilan",
+    description:
+      "Mazali tillarang muqovali shokoladlar yurak shaklida qutisi bilan va Bakal",
     features: [
-      "Tarkibida 15 ta shokolad",
-      "Qo'shimcha bezaklar",
-      "Tillarang qog'ozi",
-      "Bepul yetkazib berish"
-    ]
+      "Shirinliklar ",
+      "Shaxsiylashtirilgan kubok",
+      "Brend aksessuari",
+      "Yurak shaklidagi quti",
+      "Bayramona bezak",
+    ],
   },
   {
     id: "2",
     name: "Ayiqcha",
-    price: 150000,
+    price: "150 000 - 350 000",
     image: "images/bear.jpg",
+    images: [
+      "images/bear.jpg",
+      "images/bear2.jpg",
+      "images/bear3.jpg",
+      "images/bear4.jpg",
+    ],
     isNew: true,
-    description: "Yumshoq ayiqcha maxsus qutida",
+    description:
+      "Bu mahsulot nafis va o‘ziga xos sovg‘a bo‘lib, ichida yumshoq o‘yinchoq — yoqimli peluş ayiq yoki farzandingiz uchun kiyim joylashgan bo'lishi mumkin.",
     features: [
-      "Alohida quti",
-      "Yumshoq ayiqcha",
-    ]
+      "Yumshoq o‘yinchoq",
+      "Shaffof shar",
+      "Bezakli lenta",
+      "Bayramona dizayn",
+      "Bezakli quti",
+    ],
   },
   {
     id: "3",
-    name: "Sharlar",
-    price: 90000,
+    name: "Gender shar",
+    price: "150 000 - 350 000",
     image: "images/boy-or-girl.jpg",
+    images: ["images/boy-or-girl.jpg", "images/boy-or-girl2.jpg"],
     isNew: true,
     description: "Chaqaloq jinsini aniqlash uchun sharlar",
     features: [
-      "3 ta ko'k shar",
-      "3 ta pushti shar",
-      "Bitta katta Qora shar"
-    ]
+      "Gender shar – hayajonli daqiqalar uchun ajoyib tanlov!",
+      "Tug‘ruqxonadan kutib olish yoki gender party uchun ideal sharlar!",
+      "O‘g‘ilmi yoki qiz? Sirni ochadigan maxsus gender sharlar!",
+      "Bayramingiz unutilmas bo‘lsin! Gender shar buyurtma qabul qilamiz.",
+      "Katta gender shar bilan kutilmagan syurpriz qiling!",
+      "Farzandingiz jinsini ochishning eng kreativ usuli – gender shar!",
+    ],
   },
   {
     id: "4",
     name: "Sharlar",
-    price: 65000,
+    price: "100 000 - 300 000",
     image: "images/baloons2.jpg",
+    images: [
+      "images/baloons2.jpg",
+      "images/baloons.jpg",
+      "images/baloons3.jpg",
+      "images/baloons4.jpg",
+    ],
     isNew: false,
     description: "Sharlar to'plami bolalar bayramlari uchun",
-    features: [
-      "Ayiqchalik shar",
-      "Q'shimcha sharlar",
-      "Sifatli",
-    ]
+    features: ["Ayiqchalik shar", "Q'shimcha sharlar", "Sifatli"],
   },
+
   {
     id: "5",
-    name: "Sharlar to'plami",
-    price: 120000,
-    image: "images/baloons.jpg",
+    name: "Sharli buketlar",
+    price: "150 000 - 400 000",
+    image: "images/baloon-gul.jpg",
+    images: [
+      "images/baloon-gul.jpg",
+      "images/baloon-gul2.jpg",
+      "images/baloon-gul3.jpg",
+      "images/baloon-gul4.jpg",
+    ],
     isNew: true,
-    description: "Sharlar to'plami bolalar bayramlari uchun",
-    features: [
-      "Oq sharlar",
-      "Qizil sharlar",
-      "Sifatli",
-    ]
+    description: "Sharlardan tayyorlangan guldasta",
+    features: ["Yurakli sharlar ", "Maxsus o'ram ", "Chiroyli ko'rinish"],
   },
   {
     id: "6",
-    name: "Gullar",
-    price: 85000,
-    image: "images/lola.jpg",
-    isNew: false,
-    description: "Sovg'a uchun ajoyib quti ichidagi lolalar",
-    features: [
-      "8 ta lola ",
-      "Maxsus idish",
-      "Bantiklik shar",
-      "Chiroyli"
-    ]
-  },
-  {
-    id: "7",
-    name: "Sharli guldasta",
-    price: 150000,
-    image: "images/baloon-gul.jpg",
-    isNew: true,
-    description: "Sharlardan tayyorlangan guldasta",
-    features: [
-      "Yurakli sharlar 5 ta",
-      "Maxsus o'ram ",
-      "Chiroyli ko'rinish",
-    ]
-  },
-  {
-    id: "8",
     name: "Raqamli sharlar",
-    price: 55000,
+    price: "150 000 - 500 000",
     image: "images/baloon-1.jpg",
+    images: [
+      "images/baloon-1.jpg",
+      "images/baloon-2.jpg",
+      "images/baloon-3.jpg",
+      "images/baloon-4.jpg",
+      "images/baloon-5.jpg",
+    ],
     isNew: false,
     description: "Raqamli sharlar bu bilan yoshingizni yasasangiz bo'aldi",
-    features: [
-      "1 yoshdan 100 yoshgacha",
-      "Ajoyib shar",
-      "Maxsus bezaklar",
-    ]
+    features: ["1 yoshdan 100 yoshgacha", "Ajoyib shar", "Maxsus bezaklar"],
   },
-]; 
+];
